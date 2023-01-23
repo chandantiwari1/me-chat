@@ -249,7 +249,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           color="rgba(255, 255, 255, 0.685)"
         >
           <Heading size="4xl" mb="4">
-            De-Link
+            Chandan's chat app
           </Heading>
           <Divider />
           <Text fontSize="3xl" px="3">
