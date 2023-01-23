@@ -41,7 +41,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://me-chat-backend.onrender.com/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -66,7 +66,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "/api/message",
+          "https://me-chat-backend.onrender.com/api/message",
           {
             chatId: selectedChat._id,
             content: newMessage,
@@ -92,7 +92,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         },
       };
       await axios.post(
-        "/api/notification",
+        "https://me-chat-backend.onrender.com/api/notification",
         {
           notification: notification[0].chatId.latestMessage,
         },

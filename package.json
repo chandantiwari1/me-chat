@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": "https://me-chat-backend.onrender.com/",
+  "proxy": "https://me-chat-backend.onrender.com",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^1.8.8",

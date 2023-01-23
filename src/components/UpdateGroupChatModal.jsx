@@ -54,7 +54,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const { data } = await axios.put(
-        `/api/chats/groupremove`,
+        `https://me-chat-backend.onrender.com/api/chats/groupremove`,
         {
           userId: userToBeRemoved._id,
           chatId: selectedChat._id,
@@ -86,7 +86,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const { data } = await axios.put(
-        "/api/chats/grouprename",
+        "https://me-chat-backend.onrender.com/api/chats/grouprename",
         { chatName: groupChatName, chatId: selectedChat._id },
         config
       );
@@ -114,7 +114,7 @@ const UpdateGroupChatModal = ({
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/users?search=${search}`, config);
+      const { data } = await axios.get(`https://me-chat-backend.onrender.com/api/users?search=${search}`, config);
       setSearchResult(data.users);
       setLoading(false);
     } catch (err) {
@@ -143,7 +143,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const { data } = await axios.put(
-        `/api/chats/groupadd`,
+        `https://me-chat-backend.onrender.com/api/chats/groupadd`,
         {
           userId: userToAdd._id,
           chatId: selectedChat._id,
@@ -167,7 +167,7 @@ const UpdateGroupChatModal = ({
         },
       };
       await axios.put(
-        `/api/chats/groupremove`,
+        `https://me-chat-backend.onrender.com/api/chats/groupremove`,
         {
           userId: userToBeRemoved.user._id,
           chatId: selectedChat._id,
